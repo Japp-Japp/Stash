@@ -1,0 +1,39 @@
+/*postprocessing*/
+.mainpage *{
+    filter: contrast(1.2) blur(0.3px);
+}
+
+/*css*/
+body, h1,h2,h3,h4,h5,h6, pre, code {
+    font-family: "Lucida Console", "Courier New", monospace;
+    color: lightgreen;
+    padding: 8px;
+    border-radius: 2px;
+    line-height: 1;
+}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+  background-color: black;
+}
+
+#timetable{
+    border: hidden;
+}
+
+#timetable th{
+	border: hidden;
+    text-align: left;
+    padding: 30px 12px;
+}
+
+#timetable td {
+	border: hidden;
+    text-align: left;
+    padding: 0px 12px;
+}
+
+.break td {
+	height: 30px;
+}
