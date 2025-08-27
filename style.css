@@ -1,39 +1,103 @@
 /*postprocessing*/
 .mainpage *{
     filter: contrast(1.2) blur(0.3px);
+	text-shadow: 0 0 5px hsl(154, 84%, 70%);
+}
+
+.glare {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	pointer-events: none;
+	z-index: -1;
+	background: radial-gradient(hsl(160 20% 15%) 0%, hsl(160 50% 10%) 70%);
+}
+
+@keyframes lines {
+  0% {background-position: 0px 0px}
+  50% {background-position: 0px 0px}
+  51% {background-position: 0px 2px}
+  100% {background-position: 0px 2px}
+}
+
+.scanlines {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+	background: repeating-linear-gradient(transparent 0px 1px, hsl(154 0% 0%/.3) 3px 4px);
+	animation: lines 0.066666666s linear infinite;
+}
+
+@keyframes blink {
+  0% {opacity: 0}
+  30% {opacity: 1}
+  70% {opacity: 1}
+  100% {opacity: 0}
+}
+
+.blink {
+  animation: blink 0.4s linear infinite;
 }
 
 /*css*/
-body, h1,h2,h3,h4,h5,h6, pre, code {
-    font-family: "Lucida Console", "Courier New", monospace;
-    color: lightgreen;
-    padding: 8px;
-    border-radius: 2px;
-    line-height: 1;
+@font-face {
+    font-family: 'fixedsys';
+    src: url('resources/fixedsys.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
-body, html {
-  height: 100%;
-  line-height: 1.8;
-  background-color: black;
+body, h1,h2,h3,h4,h5,h6, pre, code {
+    font-family: 'fixedsys';
+    color: lightgreen;
+    padding: 0;
+	margin: 0;
+    border-radius: 2px;
+    line-height: 0.8;
+}
+
+body {
+	height: 100%;
+	font-size: large;
+  
+	display: grid;
+	place-items: center;
+}
+		
+#mainpage {
 }
 
 #timetable{
-    border: hidden;
+    border: none;
 }
 
 #timetable th{
-	border: hidden;
+	border: none;
     text-align: left;
-    padding: 30px 12px;
+    padding: 1ch 0;
+	
+	width: 14ch;
 }
 
 #timetable td {
-	border: hidden;
+	border: none;
     text-align: left;
-    padding: 0px 12px;
+    padding: 0 0;
+	
+	width: 14ch;
+	height: 2ch;
+    line-height: 2ch;
+    vertical-align: bottom;
 }
 
-.break td {
-	height: 30px;
+.break tr {
+	height: 4ch;
+	line-height: 4ch;
+	vertical-align: bottom;
 }

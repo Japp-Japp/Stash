@@ -3,46 +3,55 @@
 
 <head>
 	<title>Japp Japp</title>
-	<link rel="icon" href="favicon.ico">
+	<link rel="icon" href="resources\favicon.ico">
 	<link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
 <body>
-	<div class="mainpage">
-		<pre>
-        /\ __     __     __
-       / //  \   /  \   /  \
-  __  / // /\ \ / /\ \ / /\ \
- / /\/ // /_/ // /_/ // /_/ /\
-/_____// __  // ____// ____/ /
-\_____/_/ / //_/ _/\/_/ ____/_     __
-      \__/\__\__//@//@@\/  /@@\   /@@\
-            __  /@//@/\@\ /@/\@\ /@/\@\
-           /@/\/@//@/_/@//@/_/@//@/_/@/\
-          /@@@@@//@@@@@//@@@@@//@@@@@/ /
-          \_____/@/ /@//@/ ___/@/ ____/  's
-                \__/\__\__/   \__/
+	<div id="mainpage">
+		<div class="glare"></div>
+		<div class="scanlines"></div>
+		
+		<pre id="logo">
+                /\ __     __     __
+               / //  \   /  \   /  \
+          __  / // /\ \ / /\ \ / /\ \
+         / /\/ // /_/ // /_/ // /_/ /\
+        /_____// __  // ____// ____/ /
+        \_____/_/ /_//_/ _/\/_/  ___/_     __
+              \__/\__\__//@//@@\/  /@@\   /@@\
+                    __  /@//@/\@\ /@/\@\ /@/\@\
+                   /@/\/@//@/_/@//@/_/@//@/_/@/\
+                  /@@@@@//@@@@@//@@@@@//@@@@@/ /
+                  \_____/@/ /@//@/ ___/@/ ____/  's
+                        \__/\__\__/   \__/
 				
-	            Work Schedule TM
+        	            Work Schedule TM
 		</pre>
 		<table id="timetable" border="1" cellspacing="0" cellpadding="4">
 			<thead>
 				<tr>
-				<th>Date</th>
-				<th>Day</th>
+				<th>Datum</th>
+				<th>Cycle</th>
 				<th>Status</th>
-				<th>Start</th>
-				<th>End</th>
+				<th>Entry</th>
+				<th>Exit</th>
 				</tr>
 			</thead>
-		<tbody>
-		<!--Rows-->
-		</tbody>
-  </table>
+			<tbody>
+			<!--Rows-->
+			</tbody>
+		</table>
+		
+		<pre id="footer"><br><br>Est 2025                                         by realvvood</pre>
+		<div id="cursor">
+			<span id="underscore" class="blink"></span>
+		</div>
 		
 		<!--Scripts-->
+		<script src="js/animation.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/ical.js/1.4.0/ical.min.js"></script>
-		<script src="calendar.js"></script>
+		<script src="js/calendar.js"></script>
 	</div>
 </body>
 
