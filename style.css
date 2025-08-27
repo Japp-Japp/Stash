@@ -46,20 +46,20 @@
 
 /*css*/
 @font-face {
-    font-family: 'fixedsys';
-    src: url('resources/fixedsys.ttf') format('truetype');
+    font-family: 'mpdos';
+    src: url('resources/mpdos.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 body, h1,h2,h3,h4,h5,h6, pre, code {
-    font-family: 'fixedsys';
+    font-family: 'mpdos';
     color: lightgreen;
     padding: 0;
 	margin: 0;
     border-radius: 2px;
-    line-height: 0.8;
+    line-height: 0.7;
 }
 
 body {

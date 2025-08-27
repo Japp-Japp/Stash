@@ -1,4 +1,4 @@
-const url = 'https://rms.caspeco.se/api/cloud//v1/calendarfile/ical/7a2d9c22-0104-4a5c-b2e8-6c7d4fc4aee1?system=se_ipsgot&hash=OfRVlNxr0qKssR1hhEOoXGfTSdQ%2B0dzHD%2FEPwiymJoQ%3D';
+const url = 'schedule.wheedbear.workers.dev';
 
 fetch(url)
     .then(res => {
