@@ -1,7 +1,7 @@
 const wait = (ms = 0) => new Promise(resolve => setTimeout(resolve, ms))
 
 //write to target with delay
-function writeText(target, content, delay = 3) {
+function writeText(target, content, delay = 2) {
     return new Promise((resolve) => {
         if (!content) {
             resolve();
@@ -24,7 +24,7 @@ function writeText(target, content, delay = 3) {
 }
 
 //write to table with delay
-async function writeTable(targets, contents, delay = 10) {
+async function writeTable(targets, contents, delay = 2) {
     for (let i = 0; i < targets.length; i++) {
         await writeText(targets[i], contents[i]);
         await wait(delay);
@@ -63,4 +63,3 @@ document.addEventListener('calendarLoaded', async () => {
 	cursor.prepend('> ')
 	underscore.innerHTML = '_'
 })
-

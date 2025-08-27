@@ -12,7 +12,7 @@
 	bottom: 0;
 	pointer-events: none;
 	z-index: -1;
-	background: radial-gradient(hsl(160 20% 15%) 0%, hsl(160 50% 10%) 70%);
+	background: radial-gradient(hsl(160 20% 15%) 0%, hsl(160 30% 10%) 75%);
 }
 
 @keyframes lines {
@@ -30,7 +30,7 @@
 	bottom: 0;
 	z-index: 1;
 	background: repeating-linear-gradient(transparent 0px 1px, hsl(154 0% 0%/.3) 3px 4px);
-	animation: lines 0.066666666s linear infinite;
+	animation: lines 0.07s linear infinite;
 }
 
 @keyframes blink {
@@ -71,6 +71,7 @@ body {
 }
 		
 #mainpage {
+	animation: glitch 1s linear infinite;
 }
 
 #timetable{
