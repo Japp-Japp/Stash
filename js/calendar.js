@@ -1,4 +1,4 @@
-const url = 'schedule.wheedbear.workers.dev';
+const url = 'https://schedule.wheedbear.workers.dev';
 
 fetch(url)
     .then(res => {
