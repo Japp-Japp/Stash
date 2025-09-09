@@ -66,8 +66,7 @@ fetch(url)
         document.querySelector('#timetable tbody').innerHTML = tableRows || '<tr><td colspan="5">No events</td></tr>';
 		
 		//done loading
-		
-		document.dispatchEvent(new Event('calendarLoaded'));
+		document.dispatchEvent(new Event('pageLoaded'));
     })
     .catch(err => {
         document.querySelector('#timetable tbody').innerHTML = `<tr><td colspan="5">Error loading events</td></tr>`;

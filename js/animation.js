@@ -33,17 +33,21 @@ async function writeTable(targets, contents, delay = 2) {
 
 
 //execute on page load
-document.addEventListener('calendarLoaded', async () => {
+document.addEventListener('pageLoaded', async () => {
 	//logo
 	const logo = document.getElementById('logo');
 	const logoContent = logo.innerText;
 	logo.innerHTML = '';
 	
 	//timetable
+	let cells = [];
+	let contents = [];
 	const timetable = document.getElementById('timetable');
-    const cells = timetable.querySelectorAll('thead th, tbody td');
-    const contents = Array.from(cells).map(cell => cell.textContent);
-    cells.forEach(cell => cell.textContent = '');
+	if (timetable) {
+		cells = timetable.querySelectorAll('thead th, tbody td');
+		contents = Array.from(cells).map(cell => cell.textContent);
+		cells.forEach(cell => cell.textContent = '');
+	}
 	
 	//footer
 	const footer = document.getElementById('footer');
