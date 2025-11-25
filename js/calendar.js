@@ -17,7 +17,9 @@ fetch(url)
 		const today = new Date();
 		let tableRows = '';
 		if (events.length > 0) {
-			let currentDate = today;
+			//subtract one day for buffer
+			today.setDate(today.getDate() - 1);
+			let startDate = today;
 			const lastDate = events[events.length - 1].startDate.toJSDate();
 
 			const eventDays = new Map();
@@ -28,10 +30,10 @@ fetch(url)
 
 			//iterate all dates from first to last event
 			while (currentDate <= lastDate) {
-				const isoDate = currentDate.toDateString();
-				const isToday = currentDate.toDateString() === today.toDateString();
-				const dayOfWeek = currentDate.toLocaleDateString(undefined, { weekday: 'long' });
-				const fullDate = currentDate.toLocaleDateString();
+				const isoDate = startDate.toDateString();
+				const isToday = startDate.toDateString() === today.toDateString();
+				const dayOfWeek = startDate.toLocaleDateString(undefined, { weekday: 'long' });
+				const fullDate = startDate.toLocaleDateString();
 
 				let status = 'Free';
 				let startStr = '';
@@ -59,7 +61,7 @@ fetch(url)
 					<td>${endStr}</td>
 					</tr>`;
 
-				currentDate.setDate(currentDate.getDate() + 1);
+				startDate.setDate(startDate.getDate() + 1);
 			}
 		}
 
