@@ -29,7 +29,7 @@ fetch(url)
 			});
 
 			//iterate all dates from first to last event
-			while (currentDate <= lastDate) {
+			while (startDate <= lastDate) {
 				const isoDate = startDate.toDateString();
 				const isToday = startDate.toDateString() === today.toDateString();
 				const dayOfWeek = startDate.toLocaleDateString(undefined, { weekday: 'long' });
